@@ -1,8 +1,4 @@
-DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS venues;
-DROP TABLE IF EXISTS courts;
-DROP TABLE IF EXISTS bookings;
-
+CREATE EXTENSION IF NOT EXISTS btree_gist;
 
 CREATE TABLE users (
     id SERIAL PRIMARY KEY NOT NULL,
@@ -36,7 +32,14 @@ CREATE TABLE bookings (
     court_id INT NOT NULL REFERENCES courts(id),
     start_time TIMESTAMPTZ NOT NULL,
     end_time TIMESTAMPTZ NOT NULL,
-    CHECK (end_time > start_time)
+    CHECK (end_time > start_time),
+    -- allows us to check for overlaps in booking times with gist and for the same court id using b_trees
+    EXCLUDE USING gist (
+        court_id WITH =,
+        tstzrange(start_time, end_time) WITH &&
+    )
 );
+
+
 
 

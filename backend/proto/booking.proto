@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package booking;
+
+option go_package = "github.com/neevbhandari13/bookr/backend/gen/booking;booking";
+
+// service to manage bookings
+service BookingService {
+    // ping returns ok if service is up
+    rpc Ping(PingRequest) returns (PingResponse);
+}
+
+message PingRequest {}
+
+message PingResponse {
+  string status = 1;
+}
+
+
