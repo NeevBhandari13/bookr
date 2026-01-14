@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package booking;
 
-option go_package = "github.com/neevbhandari13/bookr/backend/gen/booking;booking";
+option go_package = "github.com/neevbhandari13/bookr/backend/gen/booking";
 
 // service to manage bookings
 service BookingService {

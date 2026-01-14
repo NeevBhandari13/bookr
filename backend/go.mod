@@ -1,4 +1,4 @@
-module github.com/NeevBhandari13/bookr
+module github.com/neevbhandari13/bookr/backend
 
 go 1.24.0
 

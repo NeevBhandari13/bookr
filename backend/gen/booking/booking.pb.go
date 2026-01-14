@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.11
 // 	protoc        v6.33.2
-// source: booking.proto
+// source: booking/booking.proto
 
 package booking
 
@@ -29,7 +29,7 @@ type PingRequest struct {
 
 func (x *PingRequest) Reset() {
 	*x = PingRequest{}
-	mi := &file_booking_proto_msgTypes[0]
+	mi := &file_booking_booking_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -41,7 +41,7 @@ func (x *PingRequest) String() string {
 func (*PingRequest) ProtoMessage() {}
 
 func (x *PingRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_booking_proto_msgTypes[0]
+	mi := &file_booking_booking_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -54,7 +54,7 @@ func (x *PingRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PingRequest.ProtoReflect.Descriptor instead.
 func (*PingRequest) Descriptor() ([]byte, []int) {
-	return file_booking_proto_rawDescGZIP(), []int{0}
+	return file_booking_booking_proto_rawDescGZIP(), []int{0}
 }
 
 type PingResponse struct {
@@ -66,7 +66,7 @@ type PingResponse struct {
 
 func (x *PingResponse) Reset() {
 	*x = PingResponse{}
-	mi := &file_booking_proto_msgTypes[1]
+	mi := &file_booking_booking_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -78,7 +78,7 @@ func (x *PingResponse) String() string {
 func (*PingResponse) ProtoMessage() {}
 
 func (x *PingResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_booking_proto_msgTypes[1]
+	mi := &file_booking_booking_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -91,7 +91,7 @@ func (x *PingResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PingResponse.ProtoReflect.Descriptor instead.
 func (*PingResponse) Descriptor() ([]byte, []int) {
-	return file_booking_proto_rawDescGZIP(), []int{1}
+	return file_booking_booking_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *PingResponse) GetStatus() string {
@@ -101,35 +101,35 @@ func (x *PingResponse) GetStatus() string {
 	return ""
 }
 
-var File_booking_proto protoreflect.FileDescriptor
+var File_booking_booking_proto protoreflect.FileDescriptor
 
-const file_booking_proto_rawDesc = "" +
+const file_booking_booking_proto_rawDesc = "" +
 	"\n" +
-	"\rbooking.proto\x12\abooking\"\r\n" +
+	"\x15booking/booking.proto\x12\abooking\"\r\n" +
 	"\vPingRequest\"&\n" +
 	"\fPingResponse\x12\x16\n" +
 	"\x06status\x18\x01 \x01(\tR\x06status2E\n" +
 	"\x0eBookingService\x123\n" +
-	"\x04Ping\x12\x14.booking.PingRequest\x1a\x15.booking.PingResponseB=Z;github.com/neevbhandari13/bookr/backend/gen/booking;bookingb\x06proto3"
+	"\x04Ping\x12\x14.booking.PingRequest\x1a\x15.booking.PingResponseB5Z3github.com/neevbhandari13/bookr/backend/gen/bookingb\x06proto3"
 
 var (
-	file_booking_proto_rawDescOnce sync.Once
-	file_booking_proto_rawDescData []byte
+	file_booking_booking_proto_rawDescOnce sync.Once
+	file_booking_booking_proto_rawDescData []byte
 )
 
-func file_booking_proto_rawDescGZIP() []byte {
-	file_booking_proto_rawDescOnce.Do(func() {
-		file_booking_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_booking_proto_rawDesc), len(file_booking_proto_rawDesc)))
+func file_booking_booking_proto_rawDescGZIP() []byte {
+	file_booking_booking_proto_rawDescOnce.Do(func() {
+		file_booking_booking_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_booking_booking_proto_rawDesc), len(file_booking_booking_proto_rawDesc)))
 	})
-	return file_booking_proto_rawDescData
+	return file_booking_booking_proto_rawDescData
 }
 
-var file_booking_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
-var file_booking_proto_goTypes = []any{
+var file_booking_booking_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
+var file_booking_booking_proto_goTypes = []any{
 	(*PingRequest)(nil),  // 0: booking.PingRequest
 	(*PingResponse)(nil), // 1: booking.PingResponse
 }
-var file_booking_proto_depIdxs = []int32{
+var file_booking_booking_proto_depIdxs = []int32{
 	0, // 0: booking.BookingService.Ping:input_type -> booking.PingRequest
 	1, // 1: booking.BookingService.Ping:output_type -> booking.PingResponse
 	1, // [1:2] is the sub-list for method output_type
@@ -139,26 +139,26 @@ var file_booking_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_booking_proto_init() }
-func file_booking_proto_init() {
-	if File_booking_proto != nil {
+func init() { file_booking_booking_proto_init() }
+func file_booking_booking_proto_init() {
+	if File_booking_booking_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_booking_proto_rawDesc), len(file_booking_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_booking_booking_proto_rawDesc), len(file_booking_booking_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_booking_proto_goTypes,
-		DependencyIndexes: file_booking_proto_depIdxs,
-		MessageInfos:      file_booking_proto_msgTypes,
+		GoTypes:           file_booking_booking_proto_goTypes,
+		DependencyIndexes: file_booking_booking_proto_depIdxs,
+		MessageInfos:      file_booking_booking_proto_msgTypes,
 	}.Build()
-	File_booking_proto = out.File
-	file_booking_proto_goTypes = nil
-	file_booking_proto_depIdxs = nil
+	File_booking_booking_proto = out.File
+	file_booking_booking_proto_goTypes = nil
+	file_booking_booking_proto_depIdxs = nil
 }
